@@ -1,5 +1,5 @@
 import { BootstrapFramework } from '@rxdi/core';
-import { HamburgerServerModule } from '../../src/server/index';
+import { HamburgerServerModule } from '../../src/hamburger/server/index';
 import { GraphQLModule } from '@rxdi/graphql';
 import { HapiModule } from '@rxdi/hapi';
 import { GraphQLPubSubModule } from '@rxdi/graphql-pubsub';

@@ -2,7 +2,7 @@
   "name": "@rxdi/ui-components",
   "version": "0.0.0",
   "description": "UI Components for building graphql-server website",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "jest",
     "deploy": "cd ./src && rxdi-deploy ./index.ts @rxdi/ui-components commit --tsconfig --beat 3000",
@@ -40,7 +40,7 @@
   "browserslist": [
     "last 1 chrome versions"
   ],
-  "types": "./dist/index.d.ts",
-  "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts"
+  "types": "./index.d.ts",
+  "module": "./index.js",
+  "typings": "./index.d.ts"
 }

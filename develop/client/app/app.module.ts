@@ -1,8 +1,7 @@
 import { Module } from '@rxdi/core';
-import { RouterModule } from '@rxdi/router';
 import { GraphqlModule } from '@rxdi/graphql-client';
 import { AppComponent } from './app.component';
-import { HamburgerComponent } from '../../../src/client/components/hamburger/hamburger.component';
+import { HamburgerComponent } from '../../../src/hamburger/client/hamburger.component';
 
 @Module({
   components: [HamburgerComponent],
