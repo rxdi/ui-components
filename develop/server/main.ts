@@ -1,10 +1,10 @@
 import { BootstrapFramework } from '@rxdi/core';
-import { HamburgerServerModule } from '../../src/hamburger/server/index';
 import { GraphQLModule } from '@rxdi/graphql';
 import { HapiModule } from '@rxdi/hapi';
 import { GraphQLPubSubModule } from '@rxdi/graphql-pubsub';
+import { AppModule } from './app.module';
 
-BootstrapFramework(HamburgerServerModule, [
+BootstrapFramework(AppModule, [
   HapiModule.forRoot({
     hapi: {
       port: process.env.API_PORT || process.env.PORT || 9000,

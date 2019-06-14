@@ -6,9 +6,11 @@
   "scripts": {
     "test": "jest",
     "deploy": "cd ./src && rxdi-deploy ./index.ts @rxdi/ui-components commit --tsconfig --beat 3000",
-    "start-client": "parcel ./develop/client/index.html --out-dir build/client",
+    "start-client": "parcel ./develop/client/index.html --out-dir build/client --public-url /ui-components",
     "start-server": "gapi start --local --path=./develop/server/main.ts --outDir build/server",
-    "introspect":"gapi schema introspect --collect-documents --collect-types",
+    "build-client": "parcel build ./develop/client/index.html --out-dir build/client-prod --target browser --public-url /ui-components",
+    "build-server": "gapi build --local --path=./develop/server/main.ts --outDir build/server",
+    "introspect": "gapi schema introspect --collect-documents --collect-types",
     "build": "rm -rf dist && tsc"
   },
   "repository": {
@@ -33,14 +35,21 @@
     "@rxdi/lit-html": "0.5.11",
     "@rxdi/router": "0.5.11",
     "@types/graphql": "^14.2.0",
+    "@types/js-yaml": "^3.12.1",
+    "@types/marked": "^0.6.5",
     "@types/node": "^12.0.8",
     "@webcomponents/webcomponentsjs": "1.2.4",
-    "typescript": "3.5.1"
+    "cssnano": "^4.1.10",
+    "typescript": "^3.5.1"
   },
   "browserslist": [
     "last 1 chrome versions"
   ],
   "types": "./index.d.ts",
   "module": "./index.js",
-  "typings": "./index.d.ts"
+  "typings": "./index.d.ts",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "marked": "^0.6.2"
+  }
 }
