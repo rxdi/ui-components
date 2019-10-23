@@ -1,6 +1,6 @@
 {
   "name": "@rxdi/ui-components",
-  "version": "0.7.35",
+  "version": "0.7.36",
   "description": "UI Components for building graphql-server website",
   "main": "./index.js",
   "scripts": {
